@@ -1,0 +1,19 @@
+# Source material kept local (originals, reference, working notes)
+Brand assist/
+Me Pictures/
+*Dribbble*.html
+*Dribbble*_files/
+CLAUDE .MD.md
+CLAUDE.md
+
+# Local tooling and output
+screenshot.mjs
+temporary screenshots/
+node_modules/
+
+# Secrets and OS files
+.env
+.env.*
+Thumbs.db
+.DS_Store
+desktop.ini

@@ -1,0 +1,44 @@
+# Ahmed Saad | AI Automation Developer
+
+Personal portfolio for Ahmed Saad, an AI automation developer based in Cairo who builds n8n workflows, AI agents, RAG systems and code-based automations.
+
+**Live site:** https://ahmedsaadd249.github.io/Portfolio-website/
+
+## What's on the site
+
+- **13 selected builds**, each with a diagram of how it works, the stack it uses and what triggers it. The eight n8n builds are drawn from their real workflow exports. The other five (a Next.js app, Python and Claude agents, and a TypeScript job on Trigger.dev) are drawn in the same style.
+- **Real outputs** where a build produces something visible: the live Rally app, the YouTube trend-report charts and a generated newsletter.
+- **A view-only CV**, rendered page by page in the browser with pdf.js.
+
+## Run it locally
+
+It's a static site with no build step and no dependencies.
+
+```bash
+node serve.mjs
+```
+
+Then open http://localhost:3000.
+
+## Structure
+
+```
+index.html            Page markup, styles and scripts
+assets/
+  workflows.js        n8n workflow graphs: node names, types, positions and connections only
+  builds.js           Graphs for the builds that live outside n8n
+  brand-icons.js      Tool logos used in the diagrams (Simple Icons, CC0)
+  outputs/            Screenshots and charts produced by the builds
+  og-image.jpg        Link preview image
+CV/Ahmed_Saad_CV.pdf  CV shown in the in-page reader
+serve.mjs             Tiny static server for local preview
+```
+
+The workflow graphs were extracted from the original n8n JSON exports and keep only the structure. Parameters, credentials and API keys are not included.
+
+## Contact
+
+- Email: ahmedsaadd249@gmail.com
+- LinkedIn: https://www.linkedin.com/in/ahmed-saad-872a5a397
+- X: https://x.com/ahmedsaadd249
+- GitHub: https://github.com/ahmedsaadd249
