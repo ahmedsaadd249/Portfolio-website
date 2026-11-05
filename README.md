@@ -2,12 +2,12 @@
 
 Personal portfolio for Ahmed Saad, an AI automation developer based in Cairo who builds n8n workflows, AI agents, RAG systems and web apps.
 
-**Live site:** https://ahmedsaadd249.github.io/Portfolio-website/
+**Live site:** https://ahmedsaadportfolio.vercel.app
 
 ## What's on the site
 
 - **16 selected builds**, each with a diagram of how it works, the stack it uses and what triggers it, with filter tabs for web apps, n8n workflows and AI agents & scripts. The eight n8n builds are drawn from their real workflow exports. The others (the Eva Scarf store, the Lumora Dental booking site, the Rally app, this site, Claude agents and a job on Trigger.dev) are drawn in the same style.
-- **Real outputs** where a build produces something visible: screenshots of Eva Scarf and Lumora Dental, the live Rally app, the YouTube trend-report charts and a generated newsletter.
+- **Real outputs** where a build produces something visible: screenshots of the live Eva Scarf store and Lumora Dental, the live Rally app, the YouTube trend-report charts and a generated newsletter.
 - **The CV**, rendered page by page in the browser with pdf.js, with a download button.
 - **Get In Touch** opens a Gmail message to the address below; the contact section also shows the address with a Copy button.
 

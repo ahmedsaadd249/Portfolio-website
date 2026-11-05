@@ -8,8 +8,8 @@
 <meta property="og:title" content="Ahmed Saad | AI Automation Developer">
 <meta property="og:description" content="n8n automations, AI agents, RAG systems and web apps that run end to end.">
 <meta property="og:type" content="website">
-<meta property="og:url" content="https://ahmedsaadd249.github.io/Portfolio-website/">
-<meta property="og:image" content="https://ahmedsaadd249.github.io/Portfolio-website/assets/og-image.jpg">
+<meta property="og:url" content="https://ahmedsaadportfolio.vercel.app/">
+<meta property="og:image" content="https://ahmedsaadportfolio.vercel.app/assets/og-image.jpg">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
 <meta name="twitter:card" content="summary_large_image">
@@ -788,15 +788,16 @@ track.innerHTML = toolHTML + toolHTML.replace(/class="tool"/g, 'class="tool" ari
 const N8N = 'n8n workflow';
 const PROJECTS = [
   { wf: 'eva-scarf', cat: 'web', title: 'Eva Scarf: Online Store', tags: ['E-commerce', 'Arabic + English'], platform: 'Node.js + Supabase', trigger: 'A customer placing an order, and every status change the owner makes.',
-    cover: 'assets/outputs/eva-admin-overview.webp', coverAlt: 'Eva Scarf owner dashboard in Arabic: orders by status, cash still to collect, low stock and latest orders',
-    outputs: [['assets/outputs/eva-home.webp', 'Eva Scarf home page on a phone, with a carousel of the newest tarhas'], ['assets/outputs/eva-product.webp', 'Product page on a phone with a 20% discount and an add-to-cart button'], ['assets/outputs/eva-admin-order.webp', 'Owner view of one order: status steps, items with photos, totals and the delivery address with a Google Maps button'], ['assets/outputs/eva-admin-products.webp', 'Products list where the owner edits price, discount, stock and visibility in place']],
+    cover: 'assets/outputs/eva-home-desktop.webp', coverAlt: 'Eva Scarf live home page in Arabic: a carousel of the newest tarhas and a Shop now button',
+    outputs: [['assets/outputs/eva-home-mobile.webp', 'Eva Scarf home page on a phone, with the newest tarhas turning in a carousel'], ['assets/outputs/eva-product-mobile.webp', 'Product page on a phone: tarha photo, price and add-to-cart button'], ['assets/outputs/eva-shop-desktop.webp', 'Shop page listing every tarha with its price, a sort menu and a sold-out label'], ['assets/outputs/eva-product-desktop.webp', 'Product page on desktop with the photo, price, description and cash on delivery note']],
     stack: ['Node.js', 'Express', 'EJS', 'Tailwind CSS', 'Supabase Postgres', 'Supabase Storage', 'Brevo', 'Vercel'],
-    links: [['https://github.com/ahmedsaadd249/Eva-Scarf', 'View code on GitHub']],
+    links: [['https://evascarf.vercel.app', 'Open live store'], ['https://github.com/ahmedsaadd249/Eva-Scarf', 'View code on GitHub']],
     points: ['An Arabic-first online store for Sudanese tarhas: customers browse, add to cart and order with cash on delivery.', 'Customers sign in with a 6-digit code sent by email, so there is no password to forget. Codes are hashed, work once and expire in 10 minutes.', 'Prices, discounts, offers and delivery fees are calculated only on the server, and stock is taken in one transaction so two customers can\'t buy the last piece.', 'The owner runs orders, products, offers and delivery areas from a dashboard. Every status change emails the customer, and the Delivered email asks for a rating.', 'Covered by unit tests, a browser test of every flow and an attack test suite: CSRF, XSS, SQL injection and price tampering.'] },
   { wf: 'lumora-dental', cat: 'web', title: 'Lumora Dental: Clinic Booking System', tags: ['Booking', 'Arabic + English'], platform: 'Node.js + Supabase', trigger: 'A patient booking a visit, and each choice the receptionist makes.',
     cover: 'assets/outputs/lumora-home.webp', coverAlt: 'Lumora Dental home page: headline, Book a visit button, opening hours and an arched photo of the reception',
     outputs: [['assets/outputs/lumora-dashboard.webp', 'Clinic dashboard: visits today, bookings waiting for confirmation, questions and patients, with a pending root canal booking'], ['assets/outputs/lumora-email.webp', 'Arabic confirmation email the patient gets once the receptionist confirms the visit'], ['assets/outputs/lumora-gallery.webp', 'Gallery page with filters for reception, treatment rooms, team, imaging and sterilization'], ['assets/outputs/lumora-home-ar-mobile.webp', 'Home page in Arabic on a phone, with the WhatsApp button']],
     stack: ['Node.js', 'HTML, CSS + JavaScript', 'Supabase', 'Nodemailer + Gmail', 'FormSubmit', 'WhatsApp', 'Vercel'],
+    links: [['https://lumoa-dental.vercel.app', 'Open live site']],
     points: ['A dental clinic website with booking, patient accounts, questions and a gallery, in Arabic and English.', 'Bookings wait for the receptionist, who confirms them or offers another time from a staff dashboard. Each status (confirmed, completed, cancelled, no show) emails the patient in their own language.', 'Email reminders go out 24 hours and 1 hour before every visit, and afterwards a link to rate the clinic and the dentist, averaged in a Reviews tab.', 'Each dentist gets a dashboard with only their own visits. Patient log-ins need a confirmed email, use hashed passwords and limit wrong attempts.'] },
   { wf: 'rally-app', cat: 'web', title: 'Rally: AI Fitness Coach App', tags: ['Web app', 'Live'], platform: 'Next.js + n8n', trigger: 'A message typed in the Rally chat.',
     outputs: [['assets/outputs/rally-app.webp', 'Rally live app: the coach chat on the left, level and message count on the right']],
