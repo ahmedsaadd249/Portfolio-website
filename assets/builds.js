@@ -1,7 +1,74 @@
-// Diagrams for builds that live outside n8n (Trigger.dev, Python/Claude agents, Next.js).
+// Diagrams for builds that live outside n8n (web apps, Trigger.dev, Python/Claude agents, Next.js).
 // Same shape as workflows.js: nodes {n: name, t: type, p: [x, y]}, edges [from, to, kind].
 // Edge kinds starting with "ai_" draw as dashed tool/sub-node links.
 Object.assign(window.WORKFLOWS, {
+  'eva-scarf': {
+    nodes: [
+      { n: 'Shop (AR/EN)', t: 'webTrigger', p: [0, 0] },
+      { n: 'Photo storage', t: 'supabase', p: [-10, 220] },
+      { n: 'Code sign-in', t: 'signin', p: [220, 0] },
+      { n: 'Cart & pricing', t: 'cart', p: [440, 0] },
+      { n: 'Supabase', t: 'supabase', p: [400, 220] },
+      { n: 'Place order', t: 'approve', p: [660, 0] },
+      { n: 'Map pin', t: 'pin', p: [620, 220] },
+      { n: 'Owner dashboard', t: 'dashboard', p: [880, 0] },
+      { n: 'Status emails', t: 'mail', p: [1100, 0] },
+      { n: 'Brevo', t: 'mail', p: [1060, 220] },
+    ],
+    edges: [
+      ['Shop (AR/EN)', 'Code sign-in', 'main'],
+      ['Photo storage', 'Shop (AR/EN)', 'ai_tool'],
+      ['Code sign-in', 'Cart & pricing', 'main'],
+      ['Supabase', 'Cart & pricing', 'ai_tool'],
+      ['Cart & pricing', 'Place order', 'main'],
+      ['Map pin', 'Place order', 'ai_tool'],
+      ['Place order', 'Owner dashboard', 'main'],
+      ['Owner dashboard', 'Status emails', 'main'],
+      ['Brevo', 'Status emails', 'ai_tool'],
+    ],
+  },
+  'lumora-dental': {
+    nodes: [
+      { n: 'Booking form', t: 'formTrigger', p: [0, 0] },
+      { n: 'WhatsApp', t: 'whatsapp', p: [-60, 220] },
+      { n: 'Clinic server', t: 'nodedotjs', p: [220, 0] },
+      { n: 'Supabase', t: 'supabase', p: [160, 220] },
+      { n: 'FormSubmit', t: 'mail', p: [300, 220] },
+      { n: 'Staff dashboard', t: 'dashboard', p: [440, 0] },
+      { n: 'Patient emails', t: 'gmail', p: [660, 0] },
+      { n: 'Reminders', t: 'wait', p: [640, 220] },
+      { n: 'Rating link', t: 'star', p: [880, 0] },
+    ],
+    edges: [
+      ['Booking form', 'Clinic server', 'main'],
+      ['WhatsApp', 'Booking form', 'ai_tool'],
+      ['Supabase', 'Clinic server', 'ai_tool'],
+      ['FormSubmit', 'Clinic server', 'ai_tool'],
+      ['Clinic server', 'Staff dashboard', 'main'],
+      ['Staff dashboard', 'Patient emails', 'main'],
+      ['Reminders', 'Patient emails', 'ai_tool'],
+      ['Patient emails', 'Rating link', 'main'],
+    ],
+  },
+  'portfolio-site': {
+    nodes: [
+      { n: 'n8n exports', t: 'n8n', p: [0, 0] },
+      { n: 'Graph data', t: 'template', p: [220, 0] },
+      { n: 'SVG renderer', t: 'renderer', p: [440, 0] },
+      { n: 'Brand icons', t: 'template', p: [400, 220] },
+      { n: 'Selected Works', t: 'deck', p: [660, 0] },
+      { n: 'Filter tabs', t: 'filter', p: [620, 220] },
+      { n: 'Project details', t: 'details', p: [880, 0] },
+    ],
+    edges: [
+      ['n8n exports', 'Graph data', 'main'],
+      ['Graph data', 'SVG renderer', 'main'],
+      ['Brand icons', 'SVG renderer', 'ai_tool'],
+      ['SVG renderer', 'Selected Works', 'main'],
+      ['Filter tabs', 'Selected Works', 'ai_tool'],
+      ['Selected Works', 'Project details', 'main'],
+    ],
+  },
   'rally-app': {
     nodes: [
       { n: 'Rally chat UI', t: 'react', p: [0, 0] },
